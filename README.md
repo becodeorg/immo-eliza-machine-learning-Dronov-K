@@ -1,94 +1,88 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/twilJ7f4)
-# Regression
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/ucz-4FDS)
+# Data Analysis
 
-- Repository: `challenge-regression`
+- Repository: `challenge-data-analysis`
 - Type of Challenge: `Consolidation`
-- Duration: `5 days`
-- Deadline: `06/05/2025 17:00`
-- Solo Challenge
+- Duration: `4 days`
+- Deadline: `25/04/2025 13:30`
+- Team challenge : 4
 
-## Learning objectives
+## Mission objectives
 
-- Be able to preprocess data for machine learning.
-- Be able to apply a regression in a real context.
-- Be able to understand some of  machine learning.
-
+- Be able to use `pandas`.
+- Be able to use Data visualization libraries.(`matplotlib`,`seaborn`, `plotly`,...).
+- Be able to clean a dataset for analysis.
+- Be able to establish conclusions about a dataset.
+- Be able to find and answer creative questions about data.
+- Be able to think outside the box.
 
 ## The Mission
 
-The real estate company "ImmoEliza" asks you to create a machine learning model to predict prices on Belgium's real estate sales.
+The real estate company "ImmoEliza" wants to establish itself as the biggest one in all of Belgium. To pursue this goal, it needs to create a machine learning model to predict prices on Belgium's sales. That way, they can pick out the properties that are the most valuable to them.
 
-You have **collected** your data, you have **cleaned** and **analyzed** it a first time!
-So it's time to do some machine learning with it!
+But for this, it needs to do a preliminary analysis to gather some information. Having no in-house data scientist, they are looking for talented people to do it for them.
+
+Since your last encounter with them went great, they reached out to you to do this job. Everything is in your hands now!
+
+Take the dataset previously scraped to do the analysis. _(If you were in different groups, decide together which dataset you are going to use.)_
+
+![Analysis (Image)](https://y26uq11r8xr1zyp0d3inciqv-wpengine.netdna-ssl.com/wp-content/uploads/2019/10/37.jpg)
 
 ### Must-have features
 
-#### Step 1 : Data cleaning
+##### Step 1 : Data Cleaning
 
-Preprocess the data to be used with machine learning.
+We have decided to use the Kangaroo dataset. So it's time to do a cleaning on it. A cleaned dataset is a dataset that doesn't contain any duplicates, is blank spaces or error-free. The rest of the analysis can be discarded if you neglect this step!
 
-- You have to handle NANs.
-- You have to handle categorical data.
-- You have to select features.
+- No duplicates
+- No blank spaces (ex: `" I love python "` => `"I love python"`)
+- No errors
+- No empty values, delete them or [impute](https://machinelearningmastery.com/statistical-imputation-for-missing-values-in-machine-learning/) them
 
-#### Step 2: Data split
+##### Step 2 : Data Analysis
 
-Now that the dataset is ready, you have to format it for machine learning:
+Now that the data has been collected and cleaned, it is time for the analysis. How many variables and inputs do you have? And so on...
 
-- Divide your dataset for training and testing. (`X_train, y_train, X_test, y_test`)
+Use the tools such as `matplotlib`/`seaborn`/`plotly`!
 
-#### Step 3: Model selection
+Answer the following questions with a vizualization if appropriate:
 
-The dataset is ready. Now let's select a model.
+- How many rows and columns?
+- What is the correlation between the variables and the price? (Why might that be?)
+- How are variables correlated to each other? (Why?)
+- Which variables have the greatest influence on the price?
+- Which variables have the least influence on the price?
+- How many qualitative and quantitative variables are there? How would you transform these values into numerical values?
+- Percentage of missing values per column?
 
-Look at which models make the most sense according to your data.
+##### Step 3 : Data Interpretation
 
-#### Step 4: Apply your model
+After analyzing your data, it's finally time to interpret your results. You have to communicate your analysis using simple words and a table or graph, then use the results to decide on your best course of action.
 
-Apply your model on your data:
+Example of questions you should be able to answer to:
 
-- Train your model (on the train dataset)
-- Check for predictions (on single lines or the test dataset)
-- Once this works, look into ``sklearn``'s ``Pipeline`` object to make things clean and reusable
+\*NB: This is a non-exhaustive list. Try to make a maximum of interpretations of the dataset.
+**Bonus points from yours truly for creative and outside the box questions that you answer.\***
 
-#### Step 5: Model evaluation
+You **must** be able to answer :
 
-Let's evaluate your model. The metric we are interested in is the MAE (Mean Absolute Error). Make sure you understand it well. Try to answer those questions:
+- Plot the outliers.
+- Which variables would you delete and why ?
+- Represent the number of properties according to their surface using a histogram.
+- In your opinion, which 5 variables are the most important and why?
+- What are the **most** expensive municipalities in Belgium? (Average price, median price, price per square meter)
+- What are the **most** expensive municipalities in Wallonia? (Average price, median price, price per square meter)
+- What are the **most** expensive municipalities in Flanders? (Average price, median price, price per square meter)
+- What are the **less** expensive municipalities in Belgium? (Average price, median price, price per square meter)
+- What are the **less** expensive municipalities in Wallonia? (Average price, median price, price per square meter)
+- What are the **less** expensive municipalities in Flanders? (Average price, median price, price per square meter)
 
-- How could you improve this result?
-- Which part of the process has the most impact on the results?
-- Are there other metrics which would make more sense to evaluate your model.
-
-You may go back a couple of steps if you want to try other types of approaches.
-
-#### Bonus Step 5.5: Reinventing the wheel
-
-I know some of you will get to a viable model really quickly and will get bored to go back and forth between filtering out outliers and selecting features. The truth is when playing with ML, you only truly understand it when you do it yourself. Here is what you can do:
-
-- Watch what most ML models do to make a prediction
-- Select one which you find elegant
-- Implement it from scratch using at maximum ``numpy``
-
-Note that some are easier to implement than others.
-
-#### Step 6: Presentation
-
-Present your results in front of the group.
-
-- You have to make a nice presentation **with a professional design**.
-- You have **5 minutes** to present (without Q&A). **You can't use more time**, **you can't use less time**.
-- You **CAN'T show code or jupyter notebook** during the presentation.
-
-## Constraints
-
-### Code style
-
-- Each **function or class** has to be **typed**
-- Each **function or class** has to contain a **docstring**
-- Your code should be **commented** when necessary.
-- Your code should be **cleaned of any unused code**.
 
 ## Deliverables
+
+As a deliverable, we expected a compelling presentation that tells a story from the data. It could be in notebook format or any form of presentation.
+
+Your code should be clean, structured and documented as always.
 
 1. Pimp up the README file:
    - Description
@@ -98,7 +92,9 @@ Present your results in front of the group.
    - (Contributors)
    - (Timeline)
    - (Personal situation)
-2. Present your results in front of the group in **5mins max**.
+2. Have a clean presentation
+3. Have a clean dataset
+4. **Bonus**, Have a look at the [Pipeline](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html) object in scikit learn and try to replicate your Step 1 transformations cleanly.
 
 ### Steps
 
@@ -106,22 +102,31 @@ Present your results in front of the group.
 2. Study the request (What & Why ?)
 3. Identify technical challenges (How ?)
 
+## Plots must-have
+- Title
+- Legend
+- Axis labels (do not forget units)
+- Correct usage of colors
+- Comparable scales
+- No overlapping text
+- No screenshots
+
 ## Evaluation criteria
 
-| Criteria       | Indicator                                     | Yes/No |
-| -------------- | --------------------------------------------- | ------ |
-| 1. Is complete | Know how to answer all the above questions.   | [ ]    |
-|                | `pandas` and `matplotlib`/`seaborn` are used. | [ ]    |
-|                | All the above steps were followed.            | [ ]    |
-|                | A nice README is available.                   | [ ]    |
-|                | Your model is able to predict something.      | [ ]    |
-| 2. Is good     | You used typing and docstring.                | [ ]    |
-|                | Your code is formatted (PEP8 compliant).      | [ ]    |
-|                | No unused file/code is present.               | [ ]    |
+| Criteria       | Indicator                                                                                                     | Yes/No |
+| -------------- | ------------------------------------------------------------------------------------------------------------- | ------ |
+| 1. Is complete | Know how to answer all the above questions.                                                                   |        |
+|                | Use `pandas` and `matplotlib`/`seaborn`                                                                       |        |
+|                | Nice presentation on the subject                                                                              |        |
+|                | Code is clean and structured                                                                                  |        |
+|                | README is complete and nicely formatted                                                                       |        |
+| 2. Is great    | Additional questions were answered.                                                                           |        |
+|                | Bonus was answered.                                                                                           |        |
+|                | The [colors are chosen carefully.](https://chartio.com/learn/charts/how-to-choose-colors-data-visualization/) |        |
 
 ## Quotes
 
 “The lottery is a tax on people who don't understand the statistics.”
 _- Anonymous_
 
-![You've got this!](https://media.giphy.com/media/5wWf7GMbT1ZUGTDdTqM/giphy.gif)
+![You've got this!](https://media.giphy.com/media/JrXas5ecb4FkwbFpIE/giphy.gif)
