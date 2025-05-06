@@ -1,6 +1,4 @@
 from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn.neighbors import KNeighborsRegressor
-from sklearn.ensemble import HistGradientBoostingRegressor, RandomForestRegressor
 from sklearn.pipeline import Pipeline
 from xgboost import XGBRegressor
 from sklearn.preprocessing import StandardScaler

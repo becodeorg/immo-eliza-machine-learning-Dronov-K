@@ -1,6 +1,5 @@
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
-from sklearn.preprocessing import OneHotEncoder
 
 
 class DataEncode:
