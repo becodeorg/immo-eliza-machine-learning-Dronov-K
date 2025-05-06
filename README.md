@@ -1,132 +1,73 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/ucz-4FDS)
-# Data Analysis
+# 🏠 ImmoEliza Price Prediction
 
-- Repository: `challenge-data-analysis`
-- Type of Challenge: `Consolidation`
-- Duration: `4 days`
-- Deadline: `25/04/2025 13:30`
-- Team challenge : 4
+![Python](https://img.shields.io/badge/Python-3.11-blue) ![License](https://img.shields.io/badge/License-MIT-green)
 
-## Mission objectives
+## 📝 Description
+The **ImmoEliza Price Prediction** project is designed to help the real estate company _ImmoEliza_ predict property prices across Belgium using machine learning techniques. The project focuses on building and training a machine learning model that can accurately predict property prices based on various features from the dataset.
 
-- Be able to use `pandas`.
-- Be able to use Data visualization libraries.(`matplotlib`,`seaborn`, `plotly`,...).
-- Be able to clean a dataset for analysis.
-- Be able to establish conclusions about a dataset.
-- Be able to find and answer creative questions about data.
-- Be able to think outside the box.
+The dataset, referred to as the _Kangaroo_ dataset, contains a variety of information about properties, including location, type, and size. The project is structured into the following main steps:
 
-## The Mission
-
-The real estate company "ImmoEliza" wants to establish itself as the biggest one in all of Belgium. To pursue this goal, it needs to create a machine learning model to predict prices on Belgium's sales. That way, they can pick out the properties that are the most valuable to them.
-
-But for this, it needs to do a preliminary analysis to gather some information. Having no in-house data scientist, they are looking for talented people to do it for them.
-
-Since your last encounter with them went great, they reached out to you to do this job. Everything is in your hands now!
-
-Take the dataset previously scraped to do the analysis. _(If you were in different groups, decide together which dataset you are going to use.)_
-
-![Analysis (Image)](https://y26uq11r8xr1zyp0d3inciqv-wpengine.netdna-ssl.com/wp-content/uploads/2019/10/37.jpg)
-
-### Must-have features
-
-##### Step 1 : Data Cleaning
-
-We have decided to use the Kangaroo dataset. So it's time to do a cleaning on it. A cleaned dataset is a dataset that doesn't contain any duplicates, is blank spaces or error-free. The rest of the analysis can be discarded if you neglect this step!
-
-- No duplicates
-- No blank spaces (ex: `" I love python "` => `"I love python"`)
-- No errors
-- No empty values, delete them or [impute](https://machinelearningmastery.com/statistical-imputation-for-missing-values-in-machine-learning/) them
-
-##### Step 2 : Data Analysis
-
-Now that the data has been collected and cleaned, it is time for the analysis. How many variables and inputs do you have? And so on...
-
-Use the tools such as `matplotlib`/`seaborn`/`plotly`!
-
-Answer the following questions with a vizualization if appropriate:
-
-- How many rows and columns?
-- What is the correlation between the variables and the price? (Why might that be?)
-- How are variables correlated to each other? (Why?)
-- Which variables have the greatest influence on the price?
-- Which variables have the least influence on the price?
-- How many qualitative and quantitative variables are there? How would you transform these values into numerical values?
-- Percentage of missing values per column?
-
-##### Step 3 : Data Interpretation
-
-After analyzing your data, it's finally time to interpret your results. You have to communicate your analysis using simple words and a table or graph, then use the results to decide on your best course of action.
-
-Example of questions you should be able to answer to:
-
-\*NB: This is a non-exhaustive list. Try to make a maximum of interpretations of the dataset.
-**Bonus points from yours truly for creative and outside the box questions that you answer.\***
-
-You **must** be able to answer :
-
-- Plot the outliers.
-- Which variables would you delete and why ?
-- Represent the number of properties according to their surface using a histogram.
-- In your opinion, which 5 variables are the most important and why?
-- What are the **most** expensive municipalities in Belgium? (Average price, median price, price per square meter)
-- What are the **most** expensive municipalities in Wallonia? (Average price, median price, price per square meter)
-- What are the **most** expensive municipalities in Flanders? (Average price, median price, price per square meter)
-- What are the **less** expensive municipalities in Belgium? (Average price, median price, price per square meter)
-- What are the **less** expensive municipalities in Wallonia? (Average price, median price, price per square meter)
-- What are the **less** expensive municipalities in Flanders? (Average price, median price, price per square meter)
+1. **Data Cleaning**: The dataset is pre-processed by removing duplicates, handling missing values, and ensuring there are no errors or blank spaces.
+    
+2. **Feature Engineering**: Key features from the dataset are transformed and prepared for the model, including encoding categorical variables and scaling numerical ones.
+    
+3. **Model Training**: A machine learning model (e.g., Random Forest or XGBoost) is trained using the cleaned and processed data to predict property prices.
+    
+4. **Model Evaluation**: The performance of the trained model is evaluated to determine its accuracy and generalization ability.
 
 
-## Deliverables
 
-As a deliverable, we expected a compelling presentation that tells a story from the data. It could be in notebook format or any form of presentation.
+## 🌳 Project Structure
 
-Your code should be clean, structured and documented as always.
+```
+hangman/
+│
+├── datasets/
+|   └── Kangaroo.csv
+├── src/
+│   ├── __init__.py
+|   ├── cleaner.py
+|   ├── encoder.py
+|   └── model.py
+├── __init__.py
+├── main.py
+├── README.md  
+└── requirements.txt   
+```
 
-1. Pimp up the README file:
-   - Description
-   - Installation
-   - Usage
-   - (Visuals)
-   - (Contributors)
-   - (Timeline)
-   - (Personal situation)
-2. Have a clean presentation
-3. Have a clean dataset
-4. **Bonus**, Have a look at the [Pipeline](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html) object in scikit learn and try to replicate your Step 1 transformations cleanly.
+## 🚀 Installation and Execution
 
-### Steps
+1. **Clone the repository:**
+```bash
+git clone https://github.com/becodeorg/immo-eliza-machine-learning-Dronov-K.git
+cd immo-eliza-machine-learning-Dronov-K
+```
 
-1. Create the repository
-2. Study the request (What & Why ?)
-3. Identify technical challenges (How ?)
+2. Create and activate a virtual environment (optional):
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
-## Plots must-have
-- Title
-- Legend
-- Axis labels (do not forget units)
-- Correct usage of colors
-- Comparable scales
-- No overlapping text
-- No screenshots
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-## Evaluation criteria
+4. Run:
 
-| Criteria       | Indicator                                                                                                     | Yes/No |
-| -------------- | ------------------------------------------------------------------------------------------------------------- | ------ |
-| 1. Is complete | Know how to answer all the above questions.                                                                   |        |
-|                | Use `pandas` and `matplotlib`/`seaborn`                                                                       |        |
-|                | Nice presentation on the subject                                                                              |        |
-|                | Code is clean and structured                                                                                  |        |
-|                | README is complete and nicely formatted                                                                       |        |
-| 2. Is great    | Additional questions were answered.                                                                           |        |
-|                | Bonus was answered.                                                                                           |        |
-|                | The [colors are chosen carefully.](https://chartio.com/learn/charts/how-to-choose-colors-data-visualization/) |        |
+```sh
+python main.py
+```
 
-## Quotes
 
-“The lottery is a tax on people who don't understand the statistics.”
-_- Anonymous_
 
-![You've got this!](https://media.giphy.com/media/JrXas5ecb4FkwbFpIE/giphy.gif)
+## ✅ TODO
+
+-  **Enhance Data Cleaning Process**: Improve the handling of missing values, and outliers. Implement more advanced techniques such as interpolation, imputation for missing data. Ensure data consistency across all features and columns.
+- **Feature Engineering:** Add additional transformations to prepare features for the model, such as scaling or handling outliers.
+
+
+## ⚖️ License
+
+This project is licensed under the MIT License.
